@@ -1,0 +1,74 @@
+.myaccount{
+  height: 100%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+.explain{
+  padding: 20rpx;
+  display: block;
+  box-sizing: border-box;
+  font-size: 35rpx;
+}
+.verification-system{
+  width: 95%;
+  height: 400rpx;
+  margin: auto;
+  padding: 8rpx;
+  border-radius: 15rpx;
+  background-image: linear-gradient(to left,#87CEEB,#00BFFF);
+  color: #fff;
+  box-sizing: border-box;
+}
+.verification-system .vs-text{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+  margin-top: 15rpx;
+}
+.vs-text .picker_start,.vs-text .picker_end{
+  border: 1rpx solid #fff;
+  padding: 6rpx 15rpx;
+  border-radius: 50rpx;
+}
+.vs-text .picker_start{
+  margin-right: 5rpx;
+}
+.vs-text .picker_end{
+  margin-left: 5rpx;
+  margin-right:100rpx;
+}
+.verification-system .total-write-off {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+}
+.verification-system .total-write-off .data{
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  overflow: hidden;
+  font-size: 35rpx;
+}
+.verification-system .total-write-off .data text{
+   line-height: 80rpx;
+}
+.container{
+  width: 95%;
+  height: 480rpx;
+  margin: auto;
+  box-sizing: border-box;
+}
+.writedetails{
+  font-size: 35rpx;
+}
+.total{
+  white-space: nowrap;
+  overflow: hidden;
+}

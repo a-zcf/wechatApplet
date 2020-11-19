@@ -1,0 +1,30 @@
+<view class="cardvoucherapply">
+   <view class="card-type" wx:for="{{list}}" wx:key="item">
+      <view class="type-cont" wx:if="{{item.cardType===3}}">
+        <label class="type-text">卡券类型：</label>
+        <view class="full-offset margin-right">
+          <label class="fulloffset-text">满</label>
+          <input class="fulloffset-input" bindinput="bindFull"></input>
+        </view>
+        <view class="full-offset">
+          <label class="fulloffset-text">抵</label>
+          <input class="fulloffset-input" bindinput="bindReduction"></input>
+        </view>
+      </view>
+      <view class="type-cont" wx:if="{{item.cardType===2 || item.cardType===0}}">
+        <label class="type-text">卡券类型：</label>
+        <text>{{item.cardType===2?'兑换券':'' || item.cardType===0?'礼品券':''}}</text>
+      </view>
+     <view class="type-cont" wx:if="{{item.cardType===3 || item.cardType===2 || item.cardType===0}}">
+        <label>输入数量：</label>
+        <input wx:if="{{item.cardType===3}}" data-id="{{item.id}}" class="num-input" bindinput="bindReplaceFull"></input>
+        <input wx:if="{{item.cardType===2}}" data-id="{{item.id}}" class="num-input" bindinput="bindReplaceExchange"></input>
+        <input wx:if="{{item.cardType===0}}" data-id="{{item.id}}" class="num-input" bindinput="bindReplaceGift"></input>
+     </view>
+   </view>
+   <button class="cvca-but" wx:if="{{list.length > 0}}" bindtap="submitApply">确认提交</button>
+   <view class="noMore" wx:if="{{list.length==0}}">
+    <image src="../../images/noMore.png"></image>
+    <text class="kongkong">不好意思，好像出现了点问题~~</text>
+  </view>
+</view>

@@ -1,0 +1,154 @@
+.order-management{
+  height: 100%;
+  position: relative;
+}
+.years-query{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+.years{
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+}
+.sousuo-but{
+  width: 15%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-image: linear-gradient(to left,#87CEEB,#00BFFF);
+  border-radius: 10rpx;
+  color: #f8fafc;
+}
+.order-list{
+  width: 100%;
+}
+.list-top{
+  width: 100%;
+  padding: 15rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #87CEEB;
+  box-sizing: border-box;
+}
+.writedetails-list{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  box-sizing: border-box;
+  padding: 15rpx 20rpx;
+  border-radius: 15rpx;
+}
+.list-left{
+  width: 60%;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 50rpx;
+}
+.left-text{
+  white-space: nowrap;
+  overflow: hidden;
+}
+.list-right{
+  width: 40%;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.date{
+  position: relative;
+  margin-right: 50rpx;
+}
+.date-title{
+  height: 80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.date-text{
+  margin-right: 8rpx;
+}
+.down-icon{
+  font-size: 20rpx;
+}
+#box{
+  position: absolute;
+  left:0rpx;
+  width: 400rpx;
+  overflow: hidden;
+  height: 0;
+  animation-fill-mode: forwards;
+  overflow-y: auto;
+}
+
+#item_list{
+    background-color: #fff;
+    width: 100%;
+    color: #00BFFF;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+
+#item_list view{
+    text-align: center;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10rpx 0;
+}
+
+@keyframes slidedown{
+    from {
+        height: 0;
+    }
+    to {
+        height: 750rpx;
+    }
+}
+
+@keyframes slideup{
+    from {
+        height: 750rpx;
+    }
+    to {
+        height: 0;
+    }
+}
+
+.open{
+    animation: slidedown 1s;
+}
+
+.close{
+    animation: slideup 1s; 
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+.loading{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.nomore{
+  width: 80%;
+  margin: auto;
+}

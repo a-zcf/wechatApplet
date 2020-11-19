@@ -1,0 +1,117 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.0",
+  "appid": "wx091334047de9d74e",
+  "projectname": "write-off",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "收款",
+          "pathName": "pages/collection/collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "卡券申请",
+          "pathName": "pages/cardvoucherapply/cardvoucherapply",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的账户",
+          "pathName": "pages/myaccount/myaccount",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "核销明细",
+          "pathName": "pages/writedetails/writedetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "订单管理",
+          "pathName": "pages/ordermanagement/ordermanagement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "卡券申请记录",
+          "pathName": "pages/applylist/applylist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "核销成功",
+          "pathName": "pages/writesuccess/writesuccess",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

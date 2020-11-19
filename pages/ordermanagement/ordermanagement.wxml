@@ -1,0 +1,53 @@
+<view class="order-management" bindtap="hideDown">
+  <view class="years-query">
+    <view class="years">
+      <view class="date">
+        <view class="date-title" bindtap="downDate">
+          <text class="date-text">{{year}}</text>
+          <text class="iconfont icon-xiala down-icon"></text>
+        </view>
+        <view id="box" class="{{first_click?'show':'hide'}} {{state?'open':'close'}}">
+              <view id="item_list">
+                  <view wx:for="{{yearList}}" wx:key="item" data-year="{{item}}" bindtap="bindYearList">{{item}}</view>
+              </view>
+        </view>
+      </view>
+      <view class="date">
+        <view class="date-title" bindtap="downDay">
+          <text class="date-text">{{month}}</text>
+          <text class="iconfont icon-xiala down-icon"></text>
+        </view>
+        <view id="box" class="{{first_click_1?'show':'hide'}} {{state_1?'open':'close'}}">
+              <view id="item_list">
+                  <view wx:for="{{dayArr}}" wx:key="item" data-month="{{item}}" bindtap="bindDayList">{{item}}</view>
+              </view>
+        </view>
+      </view>
+    </view>
+    <text class="sousuo-but" bindtap="binQueryOrderList">搜索</text>
+  </view>
+  <view class="order-list" wx:for="{{list}}" wx:key="item">
+    <view class="list-top">
+     <text>{{item.showTime}}</text>
+     <text>核销数：{{item.num}}</text>
+    </view>
+    <view class="writedetails-list" wx:for="{{item.list}}" wx:key="item" wx:for-item="itemList">
+      <view class="list-left">
+        <text>{{itemList.cardName}}</text>
+        <text>券号：{{itemList.orderNo}}</text>
+        <text>时间：{{itemList.verifyTime}}</text>
+      </view>
+      <text class="list-right">核销人：{{itemList.verifyMan}}</text>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{loading}}">
+    <van-loading size="24px">加载中...</van-loading>
+  </view>
+  <view wx:if="{{noMore}}" class="nomore">
+    <van-divider contentPosition="center">没有更多数据了</van-divider>
+  </view>
+  <view class="noMore" wx:if="{{list.length==0 || list=='' || list == null}}">
+    <image src="../../images/noMore.png"></image>
+    <text class="kongkong">空空如也~~</text>
+  </view>
+</view>

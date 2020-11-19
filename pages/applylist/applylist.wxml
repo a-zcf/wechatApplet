@@ -1,0 +1,39 @@
+<view class="applylist">
+  <view class="conten">
+  <view class="list" wx:for="{{list}}" wx:key="item">
+      <view class="applyInfo-text"><text class="iconfont icon-dianpu color"></text><text class="shop-name">{{item.shopName}}</text></view>
+      <view class="list-info">
+        <text class="listInfo-left">申请人昵称</text>
+        <text class="listInfo-right">{{item.applyName}}</text>
+      </view>
+      <view class="list-info">
+        <text>申请卡券类型</text>
+        <text class="listInfo-right">{{item.cardName}}</text>
+      </view>
+      <view class="list-info">
+        <text>申请数量</text>
+        <text class="listInfo-right">{{item.num}}</text>
+      </view>
+      <view class="list-info">
+        <text>审核状态</text>
+        <text class="listInfo-right">{{item.status==0?'审核中':'' || item.status==1?'审核通过':'' || item.status==2?'审核失败':''}}</text>
+      </view>
+      <view class="list-info" wx:if="{{item.templateId === 5}}">
+        <text>满减</text>
+        <text class="listInfo-right">满{{item.manAmout}}减{{item.decues}}</text>
+      </view>
+      <view class="list-info">
+        <text>申请时间</text>
+        <text class="listInfo-right">2020-09-21 17:50:10</text>
+      </view>
+    </view>
+  </view>
+  <view class="applylist-but" bindtap="cardVoucherApply">
+    <text class="iconfont icon-chuangjian but-icon"></text>
+    <text class="kaquan">卡券申请</text>
+  </view>
+  <view class="noMore" wx:if="{{list.length==0 || list=='' || list == null}}">
+    <image src="../../images/noMore.png"></image>
+    <text class="kongkong">空空如也~~</text>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+.collection{
+ height: 100%;
+ position: relative;
+}
+.collection .radio{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.collection .radio .radio-phone-cart{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.radio-phone-cart .radio-phone{
+  margin-right: 50rpx;
+}
+.collection .input-content01{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  margin-top: 75rpx;
+}
+.collection .input-content01 .input,
+.collection .input-content02 .input-text .input{
+  border-bottom: 1px solid #1989fa;
+  width: 500rpx;
+}
+.collection .input-content02 .input-text{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  margin-bottom: 25rpx;
+  margin-top: 60rpx;
+}
+.collection .input-content02 .input-text .drop-down-box{
+  border: 1rpx solid #a5a4a4;
+  width: 500rpx;
+  height: 75rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.collection .input-content02 .input-text .drop-down-box .down-text{
+  width: 90%;
+  overflow: hidden;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.collection .input-content02 .input-text .drop-down-box .xiala{
+  width: 10%;
+  color: #a5a4a4;
+  border-left: 1rpx solid #a5a4a4;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 20rpx;
+}
+.collection .input-content02 .input-text .drop-down-box .select_box{
+  width: 500rpx;
+  position: absolute;
+  top: 50rpx;
+  left: -1rpx;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  padding: 15rpx 0;
+}
+ .select_box .select_one{
+   padding: 10rpx;
+}
+.but-writeoff{
+  width: 80%;
+  position: absolute;
+  bottom: 50rpx;
+  left: 10%;
+  border-radius: 100rpx;
+  background-image: linear-gradient(to left,#87CEEB,#1989fa);
+  color: #fff !important;
+}
