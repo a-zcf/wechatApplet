@@ -1,0 +1,28 @@
+.writesuccess{
+  height: 100%;
+  overflow: hidden;
+}
+.success-icon{
+  display: block;
+  font-size: 130rpx;
+  color: #1cd926;
+  text-align: center;
+  margin-top: 80rpx;
+}
+.success-text{
+  text-align: center;
+  color: #1cd926;
+}
+.image{
+  width: 550rpx;
+  height: 550rpx;
+  display: block;
+  margin: 100rpx auto auto auto;
+  border: 5rpx solid #1a76d1;
+  border-radius: 10rpx;
+}
+.saomafukuan{
+  text-align: center;
+  margin-top: 30rpx;
+  color: #a5a4a4;
+}

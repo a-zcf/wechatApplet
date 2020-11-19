@@ -1,0 +1,20 @@
+<view class="writedetails">
+  <view class="writedetails-list" wx:for="{{list}}" wx:key="item">
+   <view class="list-left">
+     <text>{{item.cardName}}</text>
+     <text class="left-text">券号：{{item.orderNo}}</text>
+     <text class="left-text">时间：{{item.verifyTime}}</text>
+   </view>
+   <text class="list-right">核销人：{{item.verifyMan}}</text>
+  </view>
+  <view class="loading" wx:if="{{loading}}">
+    <van-loading size="24px">加载中...</van-loading>
+  </view>
+  <view wx:if="{{noMore}}" class="nomore">
+    <van-divider contentPosition="center">没有更多数据了</van-divider>
+  </view>
+  <view class="noMore" wx:if="{{list.length==0 || list=='' || list == null}}">
+    <image src="../../images/noMore.png"></image>
+    <text class="kongkong">空空如也~~</text>
+  </view>
+</view>

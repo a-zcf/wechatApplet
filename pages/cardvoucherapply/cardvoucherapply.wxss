@@ -1,0 +1,47 @@
+.cardvoucherapply{
+  height: 100%;
+}
+.cardvoucherapply .card-type{
+ width: 95%;
+ margin: auto;
+ border-bottom: 2rpx solid #a5a4a4;
+ box-sizing: border-box;
+  padding: 35rpx 15rpx;
+}
+.card-type .type-cont{
+   width: 100%;
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   box-sizing: border-box;
+   padding: 20rpx 0;
+}
+.type-cont .full-offset{
+  width: 25%;
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+}
+.type-cont .full-offset .fulloffset-text{
+  margin-right: 10rpx;
+}
+.type-cont .margin-right{
+  margin-right: 50rpx;
+}
+.type-cont .full-offset .fulloffset-input{
+  border: 1rpx solid #a5a4a4;
+  box-sizing: border-box;
+  padding: 5rpx;
+}
+.type-cont .type-text{
+  width: 22% !important;
+}
+.type-cont .num-input{
+  border: 1rpx solid #a5a4a4;
+  width: 75%;
+}
+.cvca-but{
+   margin-top: 200rpx !important;
+   background-color: #0368cd !important;
+   color: #fff !important;
+}

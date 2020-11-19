@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="head">
+    <image wx:if="{{headimgurl != ''}}" src="{{headimgurl}}"></image>
+    <image bindtap="loginPage" wx:else src="{{notLongImg}}"></image>
+    <view class="head-text">
+     <text class="user-name" wx:if="{{nickname != ''}}">{{nickname}}</text>
+     <text class="user-name" bindtap="loginPage" wx:else>您还未登录哦!</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="left-right" bindtap="collectionPage">
+      <text class="iconfont icon-shoukuan2 icon-lr"></text>
+      <text>收款</text>
+    </view>
+    <view class="left-right" bindtap="bindScanCode">
+      <text class="iconfont icon-hexiao icon-lr"></text>
+      <text>核销</text>
+    </view>
+  </view>
+  <view class="list">
+   <view class="list-cont" catchtap="myAccount">
+     <text class="iconfont icon-gerenzhanghu icon-left color-01"></text>
+     <text class="list-text">我的账户</text>
+     <text class="iconfont icon-gengduo more"></text>
+   </view>
+   <view class="list-cont" catchtap="orderManagement">
+     <text class="iconfont icon-dingdanguanlitubiao icon-left color-02"></text>
+     <text class="list-text">订单管理</text>
+     <text class="iconfont icon-gengduo more"></text>
+   </view>
+   <view class="list-cont" catchtap="cardVoucherApply">
+     <text class="iconfont icon-tianjiaqiaquan icon-left color-03"></text>
+     <text class="list-text">卡券申请</text>
+     <text class="iconfont icon-gengduo more"></text>
+   </view>
+   <view class="list-cont">
+     <text class="iconfont icon-bangzhuzhongxin icon-left color-04"></text>
+     <text class="bzzx">帮助中心</text>
+     <text class="phone">0771-8639901</text>
+     <text class="iconfont icon-gengduo more"></text>
+   </view>
+  </view>
+  <view class="binding" wx:if="{{show}}">
+    <view class="binding-kuang">
+      <text class="binding-text">绑定核销员</text>
+      <view class="binding-input">
+        <view class="input">
+          <text>账号:</text>
+          <van-field
+            value="{{ userName }}"
+            placeholder="请输入用户名"
+            bind:change="onChange"
+            clearable = "true"
+            type="text"
+            border="{{ false }}"
+            class="inut-field"
+          />
+        </view>
+        <view class="input">
+          <text>密码:</text>
+          <van-field
+            value="{{ passWord }}"
+            placeholder="请输入密码"
+            bind:change="changePassword"
+            clearable = "true"
+            type="password"
+            border="{{ false }}"
+            class="inut-field"
+          />
+        </view>
+      </view>
+      <view class="error-text" wx:if="{{show1}}">
+        <text class="iconfont icon-cuowu error-icon"></text>
+        <text>用户名不能为空</text>
+      </view>
+      <text class="error-text" wx:if="{{show2}}">
+        <text class="iconfont icon-cuowu error-icon"></text>
+        <text>密码不能为空</text>
+      </text>
+      <button class="binding-but" catchtap="catUserBind">确认绑定</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="myaccount">
+  <view class="head">
+    <image wx:if="{{headimgurl != ''}}" src="{{headimgurl}}"></image>
+    <image bindtap="loginPage" wx:else src="{{notLongImg}}"></image>
+    <view class="head-text">
+     <text class="user-name" wx:if="{{nickname != ''}}">{{nickname}}</text>
+     <text class="user-name" bindtap="loginPage" wx:else>您还未登录哦!</text>
+    </view>
+  </view>
+  <text class="explain">核销数据说明</text>
+  <view class="verification-system">
+    <view class="vs-text">
+      <text></text>
+      <picker mode="date" value="{{dateStart}}" start="2015-01-01" end="2025-12-31" bindchange="bindDateChangeStart">
+        <view class="picker_start">
+         {{dateStart}}
+        </view>
+      </picker>
+      至
+      <picker mode="date" value="{{dateEnd}}" start="2015-01-01" end="2025-12-31" bindchange="bindDateChangeEnd">
+        <view class="picker_end">
+         {{dateEnd}}
+        </view>
+      </picker>
+      <view class="writedetails" bindtap="writeDetails">核销明细</view>
+    </view>
+    <view class="total-write-off">
+      <view class="data">
+        <text>总核销卡券数</text>
+        <text class="total">{{total}}</text>
+      </view>
+      <view class="data">
+        <text>待核销卡券数</text>
+        <text class="total">{{toBeWrittenOff}}</text>
+      </view>
+    </view>
+  </view>
+  <text class="explain">销售趋势情况</text>
+  <view class="container">
+    <ec-canvas type="2d" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}" force-use-old-canvas="true"></ec-canvas>
+  </view>
+</view>

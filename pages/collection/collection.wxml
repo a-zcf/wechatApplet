@@ -1,0 +1,37 @@
+<view class="collection">
+  <view class="radio">
+    <text>核销方式：</text>
+    <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio-phone-cart">
+      <van-radio name="1" label-disabled class="radio-phone">卡券号</van-radio>
+      <van-radio name="0" label-disabled>手机号</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="input-content01" wx:if="{{radio==1}}">
+    <text>输入内容：</text>
+    <input type="text" class="input" bindinput="bindReplaceCardNumber"></input>
+  </view>
+  <view class="input-content02" wx:if="{{radio==0}}">
+    <view class="input-text">
+      <text>输入内容：</text>
+      <input type="text" class="input" bindinput="bindReplaceCellPhoneNumber"></input>
+    </view>
+    <view class="input-text">
+      <text>选择卡劵：</text>
+      <view class="drop-down-box" bindtap='dropDownBox'>
+        <text class="down-text">{{choose_card}}</text>
+        <text class="iconfont icon-xiala xiala"></text>
+        <view class="select_box" wx:if="{{select}}">
+          <view wx:for="{{list}}" wx:key="item">
+            <view class="select_one" 
+            catchtap="selectCard"
+            data-id="{{index}}"
+            style="{{index == indexId?'color: #e8580c':''}}"
+            data-name="{{item.cardName}}"
+            data-cardcode="{{item.cardCode}}">{{item.cardName}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="but-writeoff" bindtap="confirmWriteOff">确认核销</button>
+</view>

@@ -1,0 +1,6 @@
+<view class="writesuccess">
+  <text class="iconfont icon-hexiaochenggong success-icon"></text>
+  <view class="success-text">恭喜您，核销成功！</view>
+  <image class="image" src="{{url}}"></image>
+  <view class="saomafukuan">无需加好友，扫二维码向我付款</view>
+</view>
